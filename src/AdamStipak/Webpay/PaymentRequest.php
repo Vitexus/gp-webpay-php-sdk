@@ -23,7 +23,7 @@ class PaymentRequest {
    * @param string $url
    * @param string|null $merOrderNumber
    */
-  public function __construct (int $orderNumber, float $amount, int $currency, int $depositFlag, string $url, string $merOrderNumber = null) {
+  public function __construct ($orderNumber, $amount,$currency, $depositFlag, $url, $merOrderNumber = null) {
     $this->params['MERCHANTNUMBER'] = "";
     $this->params['OPERATION'] = 'CREATE_ORDER';
     $this->params['ORDERNUMBER'] = $orderNumber;
@@ -49,7 +49,7 @@ class PaymentRequest {
   /**
    * @return array
    */
-  public function getParams (): array {
+  public function getParams () {
     return $this->params;
   }
 
@@ -60,4 +60,14 @@ class PaymentRequest {
   public function setMerchantNumber ($number) {
     $this->params['MERCHANTNUMBER'] = $number;
   }
+  /**
+   * Add Custom parameter to request fields
+   * 
+   * @param string $field eg DESCRIPTION
+   * @param mixed  $value field value
+   */
+  public function setCustomParam($field,$value){
+    $this->params[$field] = $value;
+  }
+
 }
