@@ -8,8 +8,7 @@ Full featured PHP SDK for [GP Webpay payments](http://www.gpwebpay.cz).
 The best way to install GP Webpay PHP SDK is using  [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require vitexus/webpay-php5 dev-master
-```
+$ composer require vitexus/webpay-php5 dev-php56
 
 ## Setup
 
