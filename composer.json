@@ -1,5 +1,5 @@
 {
-  "name": "adamstipak/webpay-php",
+  "name": "vitexus/webpay-php",
   "description": "GP Webpay API Wrapper",
   "type": "library",
   "keywords": ["webpay", "php"],
